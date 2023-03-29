@@ -5,7 +5,14 @@ return data.json();
     console.log(objectData[0].title);
     let tableData="";
     objectData.map((values)=> {
-        tableData+=`<p>${values.title}</p>`;
+        tableData+=` 
+        <tr>
+        <td>${values.title}</td>
+        <td>${values.description}</td>
+        <td>${values.price}</td>
+        <td><img src="${values.image}" /></td>
+      </tr>
+`;
     });
 
     document.getElementById("tableBody")!.innerHTML=tableData;
